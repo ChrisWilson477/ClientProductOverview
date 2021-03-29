@@ -5,8 +5,8 @@ import Logo from '../images/acme_logo.png';
 
 const Navbar = () => {
 	return (
-		<Container fluid>
-			<Row className="header">
+		<Row className='header'>
+			<Row className="header-row">
 				<Col>
 					{' '}
 					<img src={Logo} alt="Acme logo" className="logo" />
@@ -17,21 +17,20 @@ const Navbar = () => {
 							<a href="#men">Men</a>
 						</li>
 						<li>
-							<a href="#men">Women</a>
+							<a href="#women">Women</a>
 						</li>
 						<li>
-							<a href="#men">Youth</a>
+							<a href="#youth">Youth</a>
 						</li>
 					</ul>
 				</Col>
-				<Col className='search-bar'>Search</Col>
+				<Col className='search-bar'>
+					<input className='search-bar-input' type='text' placeholder='Search...' />
+					<input className='search-bar-btn' type='submit' value='Search' />
+				</Col>
 			</Row>
-			<Row>
-				<Col className="clothing-description">Clothing</Col>
-				<Col></Col>
-				<Col></Col>
-			</Row>
-		</Container>
+		</Row>
+
 	);
 };
 

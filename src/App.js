@@ -1,13 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
+import Navbar from './components/Navbar';
+import Overview from './components/Overview';
+
+//styling
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'react-bootstrap';
+import './styles.css';
 
 const App = () => {
-    return (
-        <div >
-        <h1> Hello World! </h1>
-        <h3> From inside the App </h3>
-        </div>
-    );
-}
+	const [hasError, setErrors] = useState(false);
+	const [clothingData, setData] = useState({});
 
-ReactDOM.render( < App / > , document.getElementById("root"))
+	// async function fetchData() {
+	// 	const res  = await fetch('')
+	// }
+
+	return (
+		<Container fluid xl>
+			<Row>
+				<Col>
+					<Navbar />
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<Overview />
+				</Col>
+			</Row>
+		</Container>
+	);
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));

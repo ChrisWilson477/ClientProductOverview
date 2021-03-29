@@ -1,0 +1,89 @@
+
+
+/* Basic Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  height: 100vh;
+}
+
+/*  Navbar */
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0));
+  height: 60px;
+  position:fixed;
+  width:100%;
+}
+
+.header-row {
+  position:fixed;
+  width:100%;
+  background-attachment:fixed;
+}
+
+.navbar {
+  max-width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.main-nav {
+  margin-top: -20px;
+
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-right: 40px;
+
+}
+
+.main-nav li a {
+  color: #e49213;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  float: right;
+  margin-top: 3px;
+  margin-right: 35px;
+}
+
+.clothing-description{
+  float:left;
+  margin-top:100px;
+}
+
+/* Search Bar */
+.search-bar{
+  margin-top: 15px;
+}
+
+.search-bar input {
+  margin-left: 5px;
+}
+
+
+.search-bar-input {
+  padding: 1px 3px;
+  border: 0;
+  outline: none;
+}
+
+.search-bar-btn {
+  background-color:#e49213;
+  color: #fff;
+  padding: 1px 7px;
+  border-radius: 5%;
+  border-style: none;
+}
+
+/*  Overview */
+.overview{
+  margin-top: 150px;
+}
