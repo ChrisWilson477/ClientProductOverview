@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Navbar from './components/Navbar';
 import Overview from './components/Overview';
 
+
 //styling
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,14 +12,14 @@ import './styles.css';
 
 const App = () => {
 	const [hasError, setErrors] = useState(false);
-	const [clothingData, setData] = useState({});
+
 
 	// async function fetchData() {
 	// 	const res  = await fetch('')
 	// }
 
 	return (
-		<Container fluid xl>
+		<Container fluid>
 			<Row>
 				<Col>
 					<Navbar />

@@ -1,10 +1,13 @@
 import React from 'react'
 
+import { Row, Col, Carousel } from 'react-bootstrap';
+
+
 const ProductMinPhoto = () => {
   return (
-    <div>
+    <Row>
 
-    </div>
+    </Row>
   )
 }
 

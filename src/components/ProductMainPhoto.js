@@ -1,48 +1,17 @@
-import React from 'react'
+import React from 'react';
+import ProductMinPhoto from './ProductMinPhoto';
 
 import { Row, Col, Carousel } from 'react-bootstrap';
-import Mock from '../images/clothes_rack.jpg'
+import MockImg from '../images/clothes_rack.jpg';
+import Mock from './Mock'
 
 const ProductMainPhoto = () => {
-  return (
-    <Col sm={8}>
-     <Carousel>
-  <Carousel.Item interval={3000}>
-    <img
-      className="d-block w-100"
-      src={Mock}
-      alt="First slide"
-    />
-    <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item interval={3000}>
-    <img
-      className="d-block w-100"
-      src={Mock}
-      alt="Second slide"
-    />
-    <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item interval={3000}>
-    <img
-      className="d-block w-100"
-      src={Mock}
-      alt="Third slide"
-    />
-    <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>
-    </Col>
-  )
-}
+	return (
+		<Col sm={7} className='left-col'>
+    <img className='main-photo' src={Mock[1].results[0].photos[0].url} />
+    <ProductMinPhoto />
+		</Col>
+	);
+};
 
-export default ProductMainPhoto
+export default ProductMainPhoto;
