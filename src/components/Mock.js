@@ -1,6 +1,6 @@
 const Mock = [
   {"id":1,
-  "name":"DUMMY Camo Onesie",
+  "name":"Camo Onesie",
   "slogan":"Blend in to your crowd.",
   "description":"The Camo Onesie will wake you up and fit you in. This high energy camo will have you blending in to even the wildest surroundings.",
   "category":"Jackets",

@@ -288,7 +288,7 @@ h3{
 
 .thumbnail-box.photo{
   margin-left: 50%;
-  border: 1px solid #e49213;
+
   text-align: center;
   max-height: 200px;
   max-width: 130px;
@@ -296,4 +296,5 @@ h3{
 
 .thumbnail.picture{
   padding: 1px 1px;
+  border: 1px solid #e49213;
 }
