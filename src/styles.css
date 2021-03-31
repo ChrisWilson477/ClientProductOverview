@@ -232,6 +232,13 @@ h3{
 }
 
 
+.thumbnail.size-text:hover,
+.thumbnail.size-text:active {
+  color: #fff;
+  background-color: #e49213;
+
+}
+
 /* Cart */
 .add-to-cart {
   text-align: left;
