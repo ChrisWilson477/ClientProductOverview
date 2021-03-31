@@ -6,11 +6,12 @@ import { Row, Col } from 'react-bootstrap';
 const Ratings = () => {
 	return (
 		<Row>
-			<Col className="rating">
+			<Col sm={5} className="rating">
+
 				<StarRatings
 					rating={4}
 					starRatedColor="#e49213"
-					starDimension="30px"
+					starDimension="24px"
 					starSpacing="1px"
 					numberOfStars={5}
 				/>
@@ -24,6 +25,8 @@ const Ratings = () => {
         name='rating'
         /> */}
 			</Col>
+			<Col sm={3} className='rating-review'><p><a href='#'>4.2</a> | <a href='#'>(10)</a></p></Col>
+			<Col sm={4} className='rating-item'> Item #116354 </Col>
 		</Row>
 	);
 };
