@@ -62,7 +62,7 @@ class App extends React.Component {
 							name={name}
 							id={id}
 							category={category}
-							default_price={default_price}
+							defaultPrice={default_price}
 							slogan={slogan}
 							description={description}
 						/>

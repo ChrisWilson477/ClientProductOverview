@@ -4,7 +4,7 @@ import { Row, Col, Carousel } from 'react-bootstrap';
 import MockImg from '../images/clothes_rack.jpg';
 import Mock from './Mock';
 
-const ProductMainPhoto = () => {
+const ProductMainPhoto = ({slogan}) => {
 	return (
 		<>
 			<Col sm={3} className="vertical-carousel">
