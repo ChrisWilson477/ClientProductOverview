@@ -3,7 +3,9 @@ import Ratings from './Ratings';
 import Mock from './Mock';
 
 import { Row, Col } from 'react-bootstrap';
-// const [quantity, setQuantity] = useState(0)
+
+
+
 
 const ProductDescription = ({
 	name,
@@ -11,7 +13,14 @@ const ProductDescription = ({
 	description,
 	defaultPrice,
 	category,
+  salePrice,
+  photos,
+  styleName
 }) => {
+
+	// const [productData, setProductData] = useState(data)
+	// const [styleData, setStyleData] = useState(data)
+
 	return (
 		<Col sm={4} className="right-col">
 			<h3>
@@ -23,7 +32,7 @@ const ProductDescription = ({
 				<Ratings />
 				<p className="overview-price">
 					{'$'}
-					{Mock[1].results[0].sale_price}
+					{salePrice}
 					{'.00'}
 					<span
 						style={{
@@ -45,9 +54,6 @@ const ProductDescription = ({
 					<p>
 						<strong>Quantity</strong>
 					</p>
-					{/* <button type="button" className="button">
-						-
-					</button> */}
 					<select type="select" className="quantity-input">
 						<option>1</option>
 						<option>2</option>
@@ -55,9 +61,6 @@ const ProductDescription = ({
 						<option>4</option>
 						<option>5</option>
 					</select>
-					{/* <button type="button" className="button">
-						+
-					</button> */}
 				</div>
 				<div className="color box">
 					<p>
@@ -66,7 +69,8 @@ const ProductDescription = ({
 					<div className="color-choices">
 						<img
 							className="thumbnail color"
-							src="https://www.colorhexa.com/4f7942.png"
+							// src={photos[0].url}
+              title={styleName}
 						/>
 						<img
 							className="thumbnail color"

@@ -7,24 +7,36 @@ import Mock from './Mock';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Overview = ({
-	name,
-	slogan,
-	id,
-	description,
-	defaultPrice,
-	category,
+	// name,
+	// slogan,
+	// id,
+	// description,
+	// defaultPrice,
+	// category,
+	// salePrice,
+	// skus,
+	// photos,
+	// styleName,
+	productData,
+	styleData
 }) => {
-	const [clothingData, setData] = useState(Mock);
+
+	const [product, setProduct] = useState(productData)
+	const [style, setStyle] = useState(styleData)
 
 	return (
 		<Row className="overview">
-			<ProductMainPhoto slogan={slogan} />
+			<ProductMainPhoto slogan={productData.slogan} photos={styleData.photos} />
 			<ProductDescription
-				name={name}
-				id={id}
-				category={category}
-				defaultPrice={defaultPrice}
-				description={description}
+				name={productData.name}
+				id={productData.id}
+				category={productData.category}
+				defaultPrice={productData.default_price}
+				description={productData.description}
+				salePrice={styleData.sale_price}
+				skus={styleData.skus}
+				photos={styleData.photos}
+				styleName={styleData.name}
 			/>
 		</Row>
 	);
