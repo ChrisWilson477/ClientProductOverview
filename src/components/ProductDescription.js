@@ -3,7 +3,7 @@ import Ratings from './Ratings';
 import Mock from './Mock';
 
 import { Row, Col } from 'react-bootstrap';
-// const [quantity, setQuantity] = useState(0)
+
 
 const ProductDescription = ({
 	name,

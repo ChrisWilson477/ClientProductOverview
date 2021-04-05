@@ -14,8 +14,8 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			category: '',
-			name: '',
+			productData: {},
+			styleData: {}
 		};
 		this.getData = this.getData.bind(this);
 	}
@@ -24,30 +24,34 @@ class App extends React.Component {
 		this.getData();
 	}
 
-	getData() {
-		axios
+	async getData() {
+		await axios
 			.get('http://52.26.193.201:3000/products/1')
 			.then((res) => res.data)
 			.then((data) =>
 				this.setState({
-					category: data.category,
-					default_price: data.default_price,
-					description: data.description,
-					id: data.id,
-					name: data.name,
-					slogan: data.slogan,
+					productData: data,
+				})
+			)
+			await axios
+			.get('http://52.26.193.201:3000/products/1/styles')
+			.then((res) => res.data)
+			.then((data) =>
+				this.setState({
+					styleData: data
 				})
 			)
 			.catch((err) => err);
 	}
 
 	render() {
-		const name = this.state.name;
-		const id = this.state.id;
-		const slogan = this.state.slogan;
-		const description = this.state.description;
-		const default_price = this.state.default_price;
-		const category = this.state.category;
+		const name = this.state.productData.name;
+		const id = this.state.productData.id;
+		const slogan = this.state.productData.slogan;
+		const description = this.state.productData.description;
+		const default_price = this.state.productData.default_price;
+		const category = this.state.productData.category;
+		const styleData = this.state.styleData;
 
 		return (
 			<Container fluid>
@@ -65,6 +69,7 @@ class App extends React.Component {
 							defaultPrice={default_price}
 							slogan={slogan}
 							description={description}
+							styleData={styleData}
 						/>
 					</Col>
 				</Row>
