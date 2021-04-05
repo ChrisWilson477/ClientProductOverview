@@ -15,7 +15,7 @@ class App extends React.Component {
 		super(props);
 		this.state = {
 			productData: {},
-			styleData: {}
+			styleData: {},
 		};
 		this.getData = this.getData.bind(this);
 	}
@@ -32,13 +32,13 @@ class App extends React.Component {
 				this.setState({
 					productData: data,
 				})
-			)
-			await axios
+			);
+		await axios
 			.get('http://52.26.193.201:3000/products/1/styles')
 			.then((res) => res.data)
 			.then((data) =>
 				this.setState({
-					styleData: data
+					styleData: data,
 				})
 			)
 			.catch((err) => err);

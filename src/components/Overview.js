@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ProductMainPhoto from './ProductMainPhoto';
 import ProductDescription from './ProductDescription';
 
-
 import Mock from './Mock';
 
 import { Container, Row, Col } from 'react-bootstrap';
@@ -15,8 +14,6 @@ const Overview = ({
 	defaultPrice,
 	category,
 }) => {
-
-
 	return (
 		<Row className="overview">
 			<ProductMainPhoto slogan={slogan} />
@@ -27,7 +24,6 @@ const Overview = ({
 				defaultPrice={defaultPrice}
 				description={description}
 			/>
-
 		</Row>
 	);
 };

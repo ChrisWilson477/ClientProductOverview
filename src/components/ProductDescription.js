@@ -4,7 +4,6 @@ import Mock from './Mock';
 
 import { Row, Col } from 'react-bootstrap';
 
-
 const ProductDescription = ({
 	name,
 	id,
