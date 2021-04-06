@@ -11,6 +11,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import './styles.css';
 
 const App = () => {
+
+
 	return (
 		<Container fluid>
 			<Row>

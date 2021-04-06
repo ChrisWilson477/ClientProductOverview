@@ -1,10 +1,10 @@
 import React from 'react'
 import CarouselPhoto from './CarouselPhoto'
 
-const Carousel = ({ stylePhotos }) => {
+const Carousel = ({ stylePhotos, photoData }) => {
   const displayPhotos = () => {
 		return stylePhotos.map((photo) => {
-      return <CarouselPhoto photo={photo.url} key={photo.url} />;
+      return <CarouselPhoto photo={photo.thumbnail_url} key={photo.url} photoData={photoData}/>;
 		});
 	};
 
