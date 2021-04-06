@@ -1,63 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { Row, Col, Carousel } from 'react-bootstrap';
-
-
-import Mock from './Mock';
+import { Row, Col } from 'react-bootstrap';
+import axios from 'axios';
+import Carousel from './Carousel';
 
 const ProductMainPhoto = () => {
+	const [styleDataPhoto, setStyleDataPhoto] = useState([]);
+	const [stylePhotos, setStylePhotos] = useState([]);
 
+	useEffect(async () => {
+		const styleResult = await axios(
+			'http://52.26.193.201:3000/products/1/styles'
+		);
+		setStyleDataPhoto(styleResult.data.results);
+		setStylePhotos(styleResult.data.results[0].photos);
+	}, []);
 
+	console.log(stylePhotos[0]);
 	return (
-		<>
-
+		<React.Fragment>
 			<Col sm={3} className="vertical-carousel">
 				<div className="vertical-carousel-inner">
-
-
-
-
-					<div className="thumbnail-box photo">
-						<img
-							className="thumbnail picture"
-							src={Mock[1].results[0].photos[1].url}
-						/>
-					</div>
-					<div className="thumbnail-box photo">
-						<img
-							className="thumbnail picture"
-							src={Mock[1].results[0].photos[2].url}
-						/>
-					</div>
-					<div className="thumbnail-box photo">
-						<img
-							className="thumbnail picture"
-							src={Mock[1].results[0].photos[3].url}
-						/>
-					</div>
-					<div className="thumbnail-box photo">
-						<img
-							className="thumbnail picture"
-							src={Mock[1].results[0].photos[4].url}
-						/>
-					</div>
-					<div className="thumbnail-box photo">
-						<img
-							className="thumbnail picture"
-							src={Mock[1].results[0].photos[5].url}
-						/>
-					</div>
-					<div className="thumbnail-box photo">
-						<img
-							className="thumbnail picture"
-							src={Mock[1].results[0].photos[0].url}
-						/>
-					</div>
+					<Carousel stylePhotos={stylePhotos} />
 				</div>
 			</Col>
 			<Col sm={5} className="left-col">
-				<img className="main-photo" src={Mock[1].results[0].photos[1].url} />
+				{stylePhotos[0] ? (
+					<img className="main-photo" src={stylePhotos[1].url} />
+				) : null}
 			</Col>
-		</>
+		</React.Fragment>
 	);
 };
 
