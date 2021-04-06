@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Photo = ({ photo, description }) => {
+const ColorPhoto = ({ photo, description }) => {
 
 	return (
 
@@ -17,4 +17,4 @@ const Photo = ({ photo, description }) => {
 	);
 };
 
-export default Photo;
+export default ColorPhoto;

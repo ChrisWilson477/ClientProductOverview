@@ -208,10 +208,8 @@ h3{
 }
 
 .thumbnail.color{
-  max-height: 80px;
-  max-width: 80px;
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
   margin-right: 4px;
   margin-top: 4px;
 }
@@ -264,6 +262,7 @@ h3{
 .left-col {
  text-align: center;
  height: 30%;
+ margin-top: 7%;
 }
 
 /* Main photo */
@@ -279,9 +278,10 @@ h3{
 /* Vertical Carousel */
 
 .vertical-carousel {
+  margin-top: 5%;
   display: block;
   flex-direction: column;
-  max-height: 600px;
+  max-height: 700px;
   height: 100%;
   width: 100%;
   overflow-x: hidden;
