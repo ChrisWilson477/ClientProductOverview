@@ -5,7 +5,7 @@ import Logo from '../images/acme_logo.png';
 
 const Navbar = () => {
 	return (
-		<Row className='header'>
+		<Row className="header">
 			<Row className="header-row">
 				<Col>
 					{' '}
@@ -24,13 +24,16 @@ const Navbar = () => {
 						</li>
 					</ul>
 				</Col>
-				<Col className='search-bar'>
-					<input className='search-bar-input' type='text' placeholder='Search...' />
-					<input className='search-bar-btn' type='submit' value='Search' />
+				<Col className="search-bar">
+					<input
+						className="search-bar-input"
+						type="text"
+						placeholder="Search..."
+					/>
+					<input className="search-bar-btn" type="submit" value="Search" />
 				</Col>
 			</Row>
 		</Row>
-
 	);
 };
 
