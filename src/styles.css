@@ -197,15 +197,23 @@ h3{
 }
 
 /* Color */
-.color-choices {
+
+.color-box p {
+  text-align: left;
+  padding-left: 9%;
+}
+
+.style-colors {
   flex-direction: row;
 }
 
 .thumbnail.color{
-  max-height: 40px;
-  max-width: 40px;
-  margin-right: 2px;
-  margin-top: 2px;
+  max-height: 80px;
+  max-width: 80px;
+  height: 80px;
+  width: 80px;
+  margin-right: 4px;
+  margin-top: 4px;
 }
 
 .thumbnail.color:hover,
@@ -288,7 +296,6 @@ h3{
 
 .thumbnail-box.photo{
   margin-left: 50%;
-
   text-align: center;
   max-height: 200px;
   max-width: 130px;

@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Row, Col, Carousel } from 'react-bootstrap';
+
+import Photo from './Photo'
 import Mock from './Mock';
 
-const ProductMainPhoto = ({ slogan }) => {
+const ProductMainPhoto = () => {
+
+
 	return (
 		<>
+
 			<Col sm={3} className="vertical-carousel">
 				<div className="vertical-carousel-inner">
-					<div className="thumbnail-box photo">
+
+
+			{/* {!isLoading
+			   ?	styles.results.map((style) => {
+           console.console.log(style);
+				})
+			    : <p> Loading...</p>
+			} */}
+
+					{/* <div className="thumbnail-box photo">
 						<img
 							className="thumbnail picture"
 							src={Mock[1].results[0].photos[1].url}
@@ -42,7 +56,7 @@ const ProductMainPhoto = ({ slogan }) => {
 							className="thumbnail picture"
 							src={Mock[1].results[0].photos[0].url}
 						/>
-					</div>
+					</div> */}
 				</div>
 			</Col>
 			<Col sm={5} className="left-col">

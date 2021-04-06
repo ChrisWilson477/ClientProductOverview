@@ -1,28 +1,38 @@
-import React, { setState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Ratings from './Ratings';
+import StyleColors from './StyleColors';
 import Mock from './Mock';
 
 import { Row, Col } from 'react-bootstrap';
 
-const ProductDescription = ({
-	name,
-	id,
-	description,
-	defaultPrice,
-	category,
-}) => {
+const ProductDescription = () => {
+	const [productData, setProductData] = useState({});
+	const [styleData, setStyleData] = useState([]);
+	const [styleAttributes, setStyleAttributes] = useState([]);
+
+	useEffect(async () => {
+		const productResult = await axios('http://52.26.193.201:3000/products/1');
+		setProductData(productResult.data);
+		const styleResult = await axios(
+			'http://52.26.193.201:3000/products/1/styles'
+		);
+		setStyleData(styleResult.data.results);
+		setStyleAttributes(styleResult.data.results[0]);
+	}, []);
+
 	return (
 		<Col sm={4} className="right-col">
 			<h3>
-				{name}
+				{productData.name}
 				{' -'}
-				{category}
+				{productData.category}
 			</h3>
 			<div>
 				<Ratings />
 				<p className="overview-price">
 					{'$'}
-					{Mock[1].results[0].sale_price}
+					{styleAttributes.sale_price}
 					{'.00'}
 					<span
 						style={{
@@ -32,12 +42,12 @@ const ProductDescription = ({
 						}}
 					>
 						{'$'}
-						{defaultPrice}
+						{productData.default_price}
 						{'.00'}
 					</span>
 				</p>
 				<p className="reduced">REDUCED PRICE!</p>
-				<p className="product-description">{description}</p>
+				<p className="product-description">{productData.description}</p>
 			</div>
 			<div>
 				<div className="quantity box">
@@ -62,24 +72,7 @@ const ProductDescription = ({
 					<p>
 						<strong>Color</strong>
 					</p>
-					<div className="color-choices">
-						<img
-							className="thumbnail color"
-							src="https://www.colorhexa.com/4f7942.png"
-						/>
-						<img
-							className="thumbnail color"
-							src="https://www.colorhexa.com/ffa500.png"
-						/>
-						<img
-							className="thumbnail color"
-							src="https://www.colorhexa.com/cd5c5c.png"
-						/>
-						<img
-							className="thumbnail color"
-							src="https://www.colorhexa.com/1e90ff.png"
-						/>
-					</div>
+					<StyleColors styleData={styleData} />
 				</div>
 				<div className="size box">
 					<p>
