@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Ratings from './Ratings';
 import StyleColors from './StyleColors';
-import Mock from './Mock';
+
 
 import { Row, Col } from 'react-bootstrap';
 
