@@ -1,14 +1,19 @@
 import React from 'react';
 import CarouselPhoto from './CarouselPhoto';
 
-const Carousel = ({ stylePhotos, photoData }) => {
+const Carousel = ({ stylePhotos, photoData, updatePhoto }) => {
+
+	console.log(photoData)
 	const displayPhotos = () => {
-		return stylePhotos.map((photo) => {
+		return stylePhotos.map((photo, index) => {
 			return (
+
 				<CarouselPhoto
 					photo={photo.thumbnail_url}
 					key={photo.url}
 					photoData={photoData}
+					updatePhoto={updatePhoto}
+					id={index}
 				/>
 			);
 		});

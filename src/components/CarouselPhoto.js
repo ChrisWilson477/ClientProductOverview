@@ -1,10 +1,10 @@
 import React from 'react';
 
-const CarouselPhoto = ({ photo, photoData }) => {
-	console.log(photoData);
+const CarouselPhoto = ({ photo, photoData, updatePhoto, id }) => {
+	console.log(id);
 	return (
 		<div className="thumbnail-box photo">
-			<img className="thumbnail picture" src={photo} />
+			<img className="thumbnail picture" src={photo} onClick={(e)=> updatePhoto(id, e)} />
 		</div>
 	);
 };

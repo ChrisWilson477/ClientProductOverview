@@ -7,7 +7,9 @@ import Mock from './Mock';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Overview = () => {
-	const [styleId, setStyleId] = useState('5');
+	const [styleId, setStyleId] = useState('1');
+
+
 	return (
 		<Row className="overview">
 			<ProductMainPhoto styleId={styleId} />
