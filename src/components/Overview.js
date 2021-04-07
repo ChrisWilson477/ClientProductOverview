@@ -7,13 +7,12 @@ import Mock from './Mock';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Overview = () => {
-	const [styleId, setStyleId] = useState('1');
-
+	const [productId, setProductId] = useState('1');
 
 	return (
 		<Row className="overview">
-			<ProductMainPhoto styleId={styleId} />
-			<ProductDescription styleId={styleId} />
+			<ProductMainPhoto productId={productId} />
+			<ProductDescription productId={productId} />
 		</Row>
 	);
 };

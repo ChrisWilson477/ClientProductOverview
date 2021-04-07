@@ -5,18 +5,18 @@ import StyleColors from './StyleColors';
 
 import { Row, Col } from 'react-bootstrap';
 
-const ProductDescription = ({ styleId }) => {
+const ProductDescription = ({ productId }) => {
 	const [productData, setProductData] = useState({});
 	const [styleData, setStyleData] = useState([]);
 	const [styleAttributes, setStyleAttributes] = useState([]);
 
 	useEffect(async () => {
 		const productResult = await axios(
-			`http://52.26.193.201:3000/products/${styleId}`
+			`http://52.26.193.201:3000/products/${productId}`
 		);
 		setProductData(productResult.data);
 		const styleResult = await axios(
-			`http://52.26.193.201:3000/products/${styleId}/styles`
+			`http://52.26.193.201:3000/products/${productId}/styles`
 		);
 		setStyleData(styleResult.data.results);
 		setStyleAttributes(styleResult.data.results[0]);
